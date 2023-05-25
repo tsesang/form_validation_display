@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="form--body">
+    <h1>Feedback Form</h1>
+    <form action="success.html" onsubmit="submission(event)" id="myform">
+        <label for="fullname">Full Name : </label>
+        <br>
+        <input type="text" name="fullname" id="fullname" placeholder="Enter Full Name">
+        <br>
+        <label for="email">Email : </label>
+        <br>
+        <input type="email" id="email" placeholder="Enter Email">
+        <br>
+        <label for="department">Department</label>
+        <select name="department" id="department" class="space--below">
+            <option selected value>select an option</option>
+            <option value="sales">Sales</option>
+            <option value="finace">finance</option>
+            <option value="associaties">associates</option>
+            <option value="attorney">attorney</option>
+            <option value="technician">technician</option>
+            <option value="admin">admin</option>
+            <option value="peon">peon</option>
+        </select>
+        <br>
+        <label for="satisfactory" >Satisfactory Factor</label>
+        <br>
+
+        <input type="radio" name="satisfactory" id="one" value="1">
+        <label for="one">1 (poor)</label>
+
+        <br>
+        <input type="radio" name="satisfactory" id="two" value="2">
+        <label for="two">2</label>
+
+        <br>
+        <input type="radio" name="satisfactory" id="three" value="3">
+        <label for="three">3</label>
+        <br>
+        <input type="radio" name="satisfactory" id="four" value="4">
+        <label for="four">4</label>
+        <br>
+        <input type="radio" name="satisfactory" id="five" class="space--below" value="5">
+        <label for="five" id="satisfactory-error">5 (good)</label>
+
+        <br>
+        <label for="feeback">Feedback</label>
+
+        <br>
+        <textarea name="feedback" id="feedback" cols="30" rows="10" class="space--below"></textarea>
+        <br>
+        <input type="checkbox" id="agree" class="space--below">
+
+        <label for="agree" id="agree-label">Agree to the <a href="">Privacy Policy</a></label>
+        <br>
+        <input type="submit">
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

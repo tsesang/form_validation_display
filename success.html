@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="success--body">
+    <h1>form details after submission</h1>
+    <div id="container">
+
+    </div>
+
+    <script>
+        let container = document.getElementById('container');
+        // Retrieve the object string from localStorage
+        var objectString = localStorage.getItem("myObject");
+        // Parse the object string into an object
+
+        var myObject = JSON.parse(objectString);
+        console.log(myObject);
+
+        // Optional: Remove the object from localStorage after retrieving it
+        // localStorage.removeItem("myObject");
+
+
+        container.innerHTML = `<table border="1px">
+                <tr>
+                    <td>1</td>
+                    <td>full name</td>
+                    <td>${myObject.fullName}</td>
+                </tr>
+                <tr>
+                                        <td>2</td>
+
+                    <td>email</td>
+                    <td>${myObject.email}</td>
+                </tr>
+                <tr>
+                                        <td>3</td>
+
+                    <td>department</td>
+                    <td>${myObject.department}</td>
+                </tr>
+                <tr>
+                                        <td>4</td>
+
+                    <td>satisfactory</td>
+                    <td>${myObject.satisfactory}</td>
+                </tr>
+                <tr>
+                                        <td>5</td>
+
+                    <td>feedback</td>
+                    <td>${myObject.feedback}</td>
+                </tr>
+            </table>`
+
+
+    </script>
+</body>
+
+</html>
